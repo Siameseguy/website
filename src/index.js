@@ -3,13 +3,19 @@ import ReactDom from 'react-dom'
 
 import NavComponent from './components/navbar'
 import HeroComponent from './components/hero'
+import MissionComponent from './components/mission'
+import SocialComponent from './components/social'
 
 const App = function() {
 	return (
-		<navbar>
-			<NavComponent />
+		<div>
+			<navbar>
+				<NavComponent />
+			</navbar>
 			<HeroComponent />
-		</navbar>
+			<MissionComponent />
+			<SocialComponent />
+		</div>
 	)
 }
 
