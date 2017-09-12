@@ -1,7 +1,7 @@
 import React from 'react'
 
 const BioComponent = () => (
-	<div className="container">
+	<div className="container biography">
 		<p>
 			Hashtag you probably haven't heard of them semiotics skateboard. Neutra
 			etsy poke venmo gluten-free selvage 8-bit lomo disrupt iPhone helvetica

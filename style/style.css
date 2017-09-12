@@ -1,3 +1,8 @@
 .jumbotron {
 	border-radius: 0rem;
 }
+
+.projects-list,
+.biography {
+	padding-top: 2rem;
+}
