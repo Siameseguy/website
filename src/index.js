@@ -1,22 +1,12 @@
 import React from 'react'
-import ReactDom from 'react-dom'
+import ReactDOM from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
 
-import NavComponent from './components/navbar'
-import HeroComponent from './components/hero'
-import MissionComponent from './components/mission'
-import SocialComponent from './components/social'
+import App from './components/app'
 
-const App = function() {
-	return (
-		<div>
-			<navbar>
-				<NavComponent />
-			</navbar>
-			<HeroComponent />
-			<MissionComponent />
-			<SocialComponent />
-		</div>
-	)
-}
-
-ReactDom.render(<App />, document.querySelector('.wrapper'))
+ReactDOM.render(
+	<BrowserRouter>
+		<App />
+	</BrowserRouter>,
+	document.querySelector('.wrapper')
+)

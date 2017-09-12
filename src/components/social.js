@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SocialComponent = function() {
+const SocialComponent = () => {
 	return (
 		<div className="social-icons">
 			<div className="container">

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MissionComponent = function() {
+const MissionComponent = () => {
 	return (
 		<div className="container">
 			<div className="headliner text-center">
