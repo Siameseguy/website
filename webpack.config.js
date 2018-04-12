@@ -1,26 +1,26 @@
+'use strict';
+
+const { resolve } = require('path')
+
 module.exports = {
-  entry: [
-    './src/index.js'
-  ],
+  entry: ['babel-polyfill', './app/main'],
   output: {
     path: __dirname,
-    publicPath: '/',
-    filename: 'bundle.js'
+    filename: './public/bundle.js'
+  },
+  mode: 'development',
+  context: __dirname,
+  devtool: 'source-map',
+  resolve: {
+    extensions: ['.js', '.jsx']
   },
   module: {
-    loaders: [{
-      exclude: /node_modules/,
-      loader: 'babel',
-      query: {
-        presets: ['react', 'es2015', 'stage-1']
+    rules: [
+      {
+        test: /jsx?$/,
+        include: resolve(__dirname, './app'),
+        loader: 'babel-loader'
       }
-    }]
-  },
-  resolve: {
-    extensions: ['', '.js', '.jsx']
-  },
-  devServer: {
-    historyApiFallback: true,
-    contentBase: './'
+    ]
   }
 };
