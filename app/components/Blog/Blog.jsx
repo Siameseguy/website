@@ -1,6 +1,7 @@
 import React from 'react'
 import store, { fetchPosts } from '../../store'
 import { connect } from 'react-redux'
+import moment from 'moment'
 
 const Blog = props => {
   const { posts } = props
@@ -11,7 +12,7 @@ const Blog = props => {
           <div key={post.id}>
             <h3>{post.name}</h3>
             <p>{post.content}</p>
-            <p>{post.createdAt}</p>
+            <p>{moment(post.createdAt).format('MMMM Do YYYY')}</p>
           </div>
         )
       })}

@@ -9,3 +9,11 @@ router.get('/', (req, res, next) => {
     .then(post => res.json(post))
     .catch(next)
 })
+
+// GET api/post/id
+router.get('/:id', (req, res, next) => {
+  const id = req.params.id
+  Post.findById(id)
+    .then(post => res.json(post))
+    .catch(next)
+})

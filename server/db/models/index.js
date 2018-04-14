@@ -2,6 +2,7 @@
 
 const db = require('../index')
 const Post = require('../models/posts')
+const Contact = require('../models/contact')
 
 // Require all the models
 // Running each model (i.e. table) module (i.e. file) registers each model into our sequelize db
@@ -12,5 +13,6 @@ const Post = require('../models/posts')
 
 module.exports = {
   db,
-  Post
+  Post,
+  Contact
 }

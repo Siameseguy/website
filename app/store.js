@@ -5,17 +5,30 @@ import thunkMiddleware from 'redux-thunk' // https://github.com/gaearon/redux-th
 import axios from 'axios'
 
 const initialState = {
-  posts: []
+  posts: [],
+  contactFormInputs: {
+    name: '',
+    email: '',
+    content: ''
+  }
 }
 
 //ACTION TYPE
 const GET_POSTS = 'GET_POSTS'
+const GET_FORM_INPUTS = 'GET_FORM_INPUTS'
 
 // ACTION CREATORS
 export const getPosts = posts => {
   return {
     type: GET_POSTS,
     posts
+  }
+}
+
+export const getFormInputs = inputs => {
+  return {
+    type: GET_FORM_INPUTS,
+    contactFormInputs: inputs
   }
 }
 
@@ -38,6 +51,12 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         posts: action.posts
+      }
+
+    case GET_FORM_INPUTS:
+      return {
+        ...state,
+        contactFormInputs: action.contactFormInputs
       }
 
     default:

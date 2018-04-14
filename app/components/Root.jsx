@@ -6,6 +6,7 @@ import MainNav from './MainNav/MainNav'
 import Home from './Home/Home'
 import About from './About/About'
 import Blog from './Blog/Blog'
+import ContactForm from './Contact/ContactForm'
 import Footer from './Footer/Footer'
 
 class Root extends Component {
@@ -26,6 +27,7 @@ class Root extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/blog" component={Blog} />
+          <Route exact path="/contact" component={ContactForm} />
         </Switch>
         <Footer />
       </div>
